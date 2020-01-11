@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personal info</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-md">
+        <div class="collapse navbar-collapse" id="navbars">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item active">
+                    <a class="nav-link scroll" href="#personal">Личная информация</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="#experience">Опыт</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="#level">JavaScript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="#about">О себе</a>
+                </li>
+            </ul>
+        </div>
+        <button class="navbar-toggler collapsed" type="button">
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+</header>
+
+<main role="main">
+    <div id="personal" class="container main--title text-center ">
+        <h1 class="h1">Анкета</h1>
+    </div>
+    <form action="" class="form-profile">
+        <div class="information">
+            <div class="information--icon text-center">
+                <img src="images/information.png" alt="information" title="information" />
+            </div>
+            <div class="container">
+                <h2 class="h2 text-center">Личная информация</h2>
+                <div class="row">
+                    <div class="input-group text-center">
+                        <div class="form-label-group">
+                            <input type="text" id="inputName" name="name" class="form-control" placeholder="ФИО" required="">
+                            <label for="inputName">ФИО</label>
+                        </div>
+                        <div class="form-label-group form-select-group">
+                            <select name="birthday" id="birthday">
+                                <option value="hide">Год рождения</option>
+                                <option value="1990">1990</option>
+                                <option value="1991">1991</option>
+                                <option value="1992">1992</option>
+                                <option value="1993">1993</option>
+                                <option value="1994">1994</option>
+                                <option value="1995">1995</option>
+                                <option value="1996">1996</option>
+                                <option value="1997">1997</option>
+                                <option value="1998">1998</option>
+                                <option value="1999">1999</option>
+                            </select>
+                        </div>
+                        <div class="form-label-group form-label-group--address">
+                            <input type="text" id="inputAddress" name="address" class="form-control" placeholder="Место проживания" required="">
+                            <label for="inputName">Место проживания</label>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="text" id="inputSkype" name="skype" class="form-control" placeholder="Skype" required="">
+                            <label for="inputSkype">Skype</label>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="email" id="inputEmail" name="email" class="form-control"
+                                   placeholder="E-mail"
+                                   required=""
+                                   onchange="inputValid('inputEmailFor', event)"
+                            >
+                            <label for="inputEmail" id="inputEmailFor">E-mail</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="experience" class="experience">
+            <div class="experience--icon text-center">
+                <img src="images/experience.png" alt="experience" title="experience" />
+            </div>
+            <div class="container">
+                <h2 class="h2 text-center">Расскажите о своем опыте</h2>
+                <div class="row">
+                    <div class="col col-md-4 col-xs">
+                        <div class="form-label-group">
+                            <input type="checkbox" id="checkBEM" name="checkBEM">
+                            <label for="checkBEM">БЭМ/OOCSS</label>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="checkbox" id="checkPreprocess" name="checkPreprocess">
+                            <label for="checkPreprocess">Stylus/LESS/SASS</label>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="checkbox" id="checkSVG" name="checkSVG">
+                            <label for="checkSVG">Работаю с SVG</label>
+                        </div>
+                    </div>
+                    <div class="col col-md-4 col-xs">
+                        <div class="form-label-group">
+                            <input type="checkbox" id="checkSemantic" name="checkSemantic">
+                            <label for="checkSemantic">Верстаю семантично</label>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="checkbox" id="checkES" name="checkES">
+                            <label for="checkES">ES2015/ES2016</label>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="checkbox" id="checkTask" name="checkTask">
+                            <label for="checkTask">Gulp/GRUNT</label>
+                        </div>
+                    </div>
+                    <div class="col col-md-4 col-xs">
+                        <div class="form-label-group">
+                            <input type="checkbox" id="checkWebpack" name="checkWebpack">
+                            <label for="checkWebpack">Webpack</label>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="checkbox" id="checkjQuery" name="checkjQuery">
+                            <label for="checkjQuery">jQuery</label>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="checkbox" id="checkGit" name="checkGit">
+                            <label for="checkGit">Ипользую Git</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="level" class="level">
+            <div class="level--icon text-center">
+                <img src="images/level.png" alt="level" title="level" />
+            </div>
+            <div class="container">
+                <h2 class="h2 text-center">Уровень владения JavaScript</h2>
+                <div class="row">
+                    <div class="level--step-1">
+                        <a class="level--link" onclick="showValue(0, false);">Не владею</a>
+                    </div>
+                    <div class="level--step-2">
+                        <a class="level--link" onclick="showValue(1, false);">Использую готовые <br/>
+                        решения</a>
+                    </div>
+                    <div class="level--step-3">
+                        <a class="level--link" onclick="showValue(2, false);">Использую готовые решения <br/>
+                        и умею и переделывать</a>
+                    </div>
+                    <div class="level--step-4 text-right">
+                        <a class="level--link" onclick="showValue(3, false);">Пишу сложный JS с нуля</a>
+                    </div>
+                    <datalist class="range__list d-none" id="number" >
+                        <option class="range__opt opt0" value="0">Не владею</option>
+                        <option class="range__opt" value="1">Использую готовые <br/>
+                            решения</option>
+                        <option class="range__opt" value="2">Использую готовые решения <br/>
+                            и умею и переделывать</option>
+                        <option class="range__opt" value="3">Пишу сложный JS с нуля</option>
+                    </datalist>
+                    <div class="form-label-group form-select-group text-center d-none">
+                        <select name="levelGroup" id="levelGroup">
+                            <option value="hide">Уровень владения JavaScript</option>
+                            <option value="0">Не владею</option>
+                            <option value="1">Использую готовые <br/>
+                                решения</option>
+                            <option value="2">Использую готовые решения <br/>
+                                и умею и переделывать</option>
+                            <option value="3">Пишу сложный JS с нуля</option>
+                        </select>
+                    </div>
+                    <div class="slidershell" id="slidershell">
+                        <div class="sliderfill" id="sliderfill"></div>
+                        <div class="slidertrack" id="slidertrack"></div>
+                        <div class="sliderthumb grabbable" id="sliderthumb"></div>
+                        <div class="slidervalue" id="slidervalue">0</div>
+                        <input name="level" list="number" class="slider" id="slider" type="range" min="0" max="3" value="3" step="1"
+                               oninput="showValue(value, false);" onchange="showValue(value, false);"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="about" class="about">
+            <div class="about--icon text-center">
+                <img src="images/about.png" alt="about" title="about" />
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="input-group text-center">
+                        <h2 class="h2">Расскажите о себе</h2>
+                        <p>
+                            Напишите несколько предложений, чем привлекла наша вакансия
+                            и что вы ожидаете от работы у нас.
+                        </p>
+
+                        <div class="form-label-group">
+                            <textarea
+                                    name="about"
+                                    id="about_text"
+                                    cols="30"
+                                    rows="10"
+                                    class="form-control"
+                                    placeholder="Понравилась тем, что..."
+                                    onchange="inputValid('aboutTextFor', event)"
+                            ></textarea>
+                            <label for="about_text" id="aboutTextFor">Понравилась тем, что...</label>
+                        </div>
+
+                        <button class="btn btn-primary">Готово</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</main>
+
+<footer></footer>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="dist/main.min.js"></script>
+</body>
+</html>
