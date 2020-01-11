@@ -20,8 +20,7 @@ function showValue(val, vertical) {
 
     rangevalue.innerHTML = val;
 
-    fill.style.opacity = pc + 1 > 1 ? 1 : pc + 0.01;
-
+    fill.style.opacity = pc + 1 > 1 ? 1 : pc + 0.1;
     rangevalue.style.top = (vertical ? loc : 0) + "px";
     rangevalue.style.left = (vertical ? 0 : loc) + "px";
     thumb.style.top =  (vertical ? loc : 25) + "px";
@@ -43,7 +42,7 @@ function setValue(val, vertical) {
     showValue(val, vertical);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
     setValue(3,false);
 });
 

@@ -4,7 +4,7 @@ const gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
     concat = require('gulp-concat'),
-    uglify = require('gulp-uglifyjs');
+    minify = require('gulp-minify');
 
 function styles(done) {
     gulp.src('./scss/style.scss')
@@ -24,17 +24,16 @@ function styles(done) {
     done();
 }
 
-function scripts(done) {
-    gulp.src(['node_modules/jquery/dist/jquery.min.js', 'js/*.js'])
-        .pipe(concat('bundle.js'))
-        .pipe(uglify())
+function scripts() {
+    return gulp.src(['./node_modules/jquery/dist/jquery.min.js', './js/*.js'])
+        .pipe(concat('prod.js'))
+        .pipe(minify())
         .pipe(gulp.dest('dist'));
-    done();
 }
 
 function watchPrint(){
-    gulp.watch("./scss/**/*", styles);
-    gulp.watch("./js/**/*", scripts)
+    gulp.watch("./scss/**/*.scss", styles);
+    gulp.watch("./js/**/*.js", scripts)
 }
 
 gulp.task('default', gulp.series(watchPrint));
