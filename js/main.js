@@ -59,7 +59,6 @@ function inputValid(id, event){
 }
 
 $(document).ready(function($) {
-
     // Animation scroll
     $(".scroll").click(function(event){
         event.preventDefault();

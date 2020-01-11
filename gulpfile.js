@@ -3,15 +3,8 @@ const gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
-    minify = require('gulp-minify');
-
-
-// Проверка ошибок в скриптах
-// gulp.task('lint', function() {
-// return gulp.src(['./js/*.js'])
-//     .pipe(jshint())
-//     .pipe(jshint.reporter('default'));
-// });
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglifyjs');
 
 function styles(done) {
     gulp.src('./scss/style.scss')
@@ -32,13 +25,9 @@ function styles(done) {
 }
 
 function scripts(done) {
-    gulp.src(['js/*.js'])
-        .pipe(minify({
-            ext:{
-                min:'.min.js'
-            },
-            compress: true
-        }))
+    gulp.src(['node_modules/jquery/dist/jquery.min.js', 'js/*.js'])
+        .pipe(concat('bundle.js'))
+        .pipe(uglify())
         .pipe(gulp.dest('dist'));
     done();
 }
