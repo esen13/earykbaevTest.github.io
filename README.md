@@ -1,5 +1,5 @@
 # Readme
 
-Start project: npm init
-Start gulp: gulp
+Start project: **npm init**
+Start gulp: **gulp**
 
